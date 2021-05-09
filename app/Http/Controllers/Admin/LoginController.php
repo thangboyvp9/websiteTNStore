@@ -36,7 +36,7 @@ class LoginController extends Controller
         }
         else{
             Session::put('message','Tên người dùng hoặc mật khẩu không đúng');
-            return redirect()->route('/login/index');
+            return redirect()->route('/Admin/index');
         }
     } 
     public function logout()
@@ -45,6 +45,7 @@ class LoginController extends Controller
         Session::put('id',null);
         Session::put('message','Bạn đã đăng xuất thành công khỏi hệ thống');
         return redirect()->route("/login/index");
+        // return redirect::to('/login/index');
     }
   
 }

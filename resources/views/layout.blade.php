@@ -11,11 +11,14 @@
     <link rel="stylesheet" href="{{asset('CSS/style.css')}}">
     <link rel="stylesheet" href="{{asset('CSS/SanPham.css')}}">
     <link rel="stylesheet" href="{{asset('CSS/CTSanPham.css')}}">
+    <link rel="stylesheet" href="{{asset('CSS/GioHang.css')}}">
     <script src="./script/script.js"></script>
     <link rel="stylesheet" href="{{asset('./font/fontawesome-free-5.13.0/css/all.min.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script async type="text/javascript" src="https://panel.chatcompose.com/static/EN/global/export/js\main.dec259c7.js" user="SonNguyen"></script>  
-</head>
+    <div id="fb-root"></div>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0" nonce="ohfNLmfW"></script></head>
 <body>
     <header>
         <div class=" container header-top">
@@ -25,11 +28,11 @@
                 </div>
                 <div class="col-sm-8 header-info">
                     <div class="header-cart">
-                        <a href="GioHang.html">
+                        <a href="{{route('cart.index')}}">
                             <span class="icon-start">
                                 <img src="{{asset('img/icon-cart.png')}}" alt="">
                             </span>
-                            <span class="cart-number">0</span>
+                            <span class="cart-number" >{{ Cart::count() }}</span>
                         </a>
                         
                         <!-- <div class="cart-view clearfix">

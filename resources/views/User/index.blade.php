@@ -1,9 +1,18 @@
 @extends('layout')
 @section('content')
+
+<?php
+    $message = Session::get('message');
+    if($message){
+        echo '
+        <script>
+            alert("Đã thêm sản phẩm thành công");
+        </script>';
+    }
+
+?>
 <header>
-<div class="header-banner">
-            <!-- <a href=""><img src="images/TrangAn-banner.jpg" alt="TrangAn-banner.jpg"></a> -->
-           
+<div class="header-banner">           
             <div id="carouselId" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselId" data-slide-to="0" class="active"></li>
@@ -12,13 +21,13 @@
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img src="img/slide1.jpg" alt="First slide" style="width:100%;">
+                        <img src="{{asset('img/slide1.jpg')}}" alt="First slide" style="width:100%;">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/slide2.jpg" alt="Second slide" style="width:100%;">
+                        <img src="{{asset('img/slide2.jpg')}}" alt="Second slide" style="width:100%;">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/slide3.jpg" alt="Third slide" style="width:100%;">
+                        <img src="{{asset('img/slide3.jpg')}}" alt="Third slide" style="width:100%;">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
@@ -53,7 +62,7 @@
                                 </a>
                                 <div class="actionss">
                                     <div class="btn-cart-products">
-                                        <a href="">
+                                        <a href="{{ route('addcart', ['id' => $PhuKien->id]) }}">
                                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -497,28 +506,31 @@
                 </article>
             </div>
         </div>
+      
+       
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 home-category-item-1">
+                    <div class="block-home-category">
+                        <a href=""><img src="{{asset('img/news.png')}}" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 home-category-item-2">
+                    <div class="block-home-category">
+                        <a href=""><img src="{{asset('img/news1.png')}}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+   
         <!-- SCROLL TO TOP -->
         <div class="Scroll">
             <a href="#top" id="scrollToTop" title="Lên trên" style="display: block;"  onclick="scrollToTop();return false">
                 <i class="fas fa-arrow-alt-circle-up"></i>
             </a>
         </div>
+        
     </section>
     
-    <div class="container banner-bottom">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 home-category-item-1">
-                <div class="block-home-category">
-                    <a href=""><img src="img/slide1.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 home-category-item-2">
-                <div class="block-home-category">
-                    <a href=""><img src="img/slide5.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     
     <div class="clear-fix"></div>
     @endsection

@@ -10,8 +10,8 @@
 }
 
 .GioHang img{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 
 
@@ -36,13 +36,16 @@
 .GioHang table tr td {
     border-top: 1px solid #dddddd;
     color: #444444;
-    font-family: 'Lobster Two';
+    font-family: 'Roboto';
     font-weight: 700;
+    color: red;
+    font-weight: bold;
 }
 
 .GioHang table tr td a{
-    font-family: 'Lobster Two';
-    font-weight: 700;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 13px;
 }
 
 #number{
@@ -50,19 +53,19 @@
     text-align: center;
 }
 .item a{
-    color: #FE9705;
+    color: black;
     font-size: 16px;
 }
 
 
 .buttons {
-    font-family: 'Lobster Two';
+    font-family: 'Roboto';
     font-weight: 700;
 }
 
 .buttons button a{
     color: #fff;
-    font-family: 'Lobster Two';
+    font-family: 'Roboto';
     font-weight: 700;
 }
 
@@ -77,21 +80,22 @@
 
 #update-cart {
     float: right;
+    background-color: gray;
 }
 
 .button-default {
-    background: #bf1515;
+    background: dodgerblue;
     border: none;
-    padding: 0 20px;
+    padding: 0px 20px;
     color: #fff;
-    font-size: 14px;
-    border-radius: 3px;
+    font-size: 17px;
+    border-radius: 5px;
     float: right;
     height: 45px;
     line-height: 45px;
     position: relative;
     cursor: pointer;
-    margin: 1px  7px;
+    margin: 1px  0px;
     bottom: 35px;
 }
 
@@ -99,3 +103,7 @@
     color: #FE9705;
 }
 
+button, input, optgroup, select, textarea {
+    text-align: center;
+    background-color: aliceblue;
+}

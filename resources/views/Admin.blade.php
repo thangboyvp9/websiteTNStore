@@ -269,7 +269,7 @@
                                 <!-- /input-group -->
                             </li>
                             <li>
-                                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Trang chủ</a>
+                                <a href=""><i class="fa fa-dashboard fa-fw"></i> Trang chủ</a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-user fa-fw"></i> Hệ thống<span class="fa arrow"></span></a>
@@ -299,13 +299,13 @@
                                 <!-- /.nav-second-level -->
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-bell fa-fw"></i> Sản phẩm<span class="fa arrow"></span></a>
+                                <a href="#"><i class="fa fa-bell fa-fw"></i>Danh mục<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level collapse">
                                     <li>
-                                        <a href="SanPham.html">Danh mục</a>
+                                        <a href="{{ route('LoaiPK.index') }}">Loại sản phẩm</a>
                                     </li>
                                     <li>
-                                        <a href="#">Tin tức</a>
+                                        <a href="{{ route('PhuKien.index') }}">Sản phẩm</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
@@ -335,13 +335,13 @@
                                 <!-- /.nav-second-level -->
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-bell fa-fw"></i> Khách hàng<span class="fa arrow"></span></a>
+                                <a href=""><i class="fa fa-bell fa-fw"></i> Khách hàng<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level collapse">
                                     <li>
-                                        <a href="KhachHang.html">Danh mục</a>
+                                        <a href="#">Danh mục</a>
                                     </li>
                                     <li>
-                                        <a href="#">Tin tức</a>
+                                        <a href="{{ route('KhachHang.index') }}">Thông tin khách hàng</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
@@ -350,10 +350,10 @@
                                 <a href="#"><i class="fa fa-bell fa-fw"></i> Nhà cung cấp<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level collapse">
                                     <li>
-                                        <a href="NhaCungCap.html">Danh mục</a>
+                                        <a href="#">Danh mục</a>
                                     </li>
                                     <li>
-                                        <a href="#">Tin tức</a>
+                                        <a href="{{ route('NhaCungCap.index') }}">Thông tin nhà cung cấp</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->

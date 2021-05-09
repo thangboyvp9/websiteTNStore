@@ -2,7 +2,8 @@
 @section('admin_content')
 
 <div class="container">
-    <div class="row">
+<h2 style="text-align:center;">Thêm Sản Phẩm</h2>
+    <div class="row" style="width:922px;">
         <div class="col-sm-6" style="float:right;">
             <form action="{{ route('PhuKien.update', $db->id) }}" method="post" enctype="multipart/form-data">
                 @csrf

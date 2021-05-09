@@ -5,8 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Danh sách sản phẩm
-                </h1>
+                    Danh sách Khách Hàng
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -19,7 +18,7 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <form action="/TimKiem_PK" method="get">                    
+                        <form action="/TimKiem_KH" method="get">                    
                             <div class="row form-group">
                                 <div class="col-lg-12">
                                     <div class="col-md-4">
@@ -38,19 +37,17 @@
                         
                         <div class="table-responsive">
                             @php 
-                            $tt = 1;
+                            $tt = 0;
                             @endphp
                             <table class="table table-striped table-bordered table-hover" style="text-align: center;">
                                 <thead>
                                     <tr>
                                         <th>id</th>
-                                        <th>MSP</th>
-                                        <th>Tên sản phẩm</th>
-                                        <th>ML</th>
-                                        <th>SL</th>
-                                        <th>Mô tả</th>
-                                        <th>Hình ảnh</th>
-                                        <th>Giá(đ)</th>
+                                        <th>Tên khách hàng</th>
+                                        <th>Ngày sinh</th>
+                                        <th>Địa chỉ</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
                                         <th>TT</th>
                                     </tr>
                                 </thead>
@@ -58,18 +55,15 @@
                                     @foreach($db as $r)
                                     <tr id="row_21">
                                         <td>{{$tt++}}</td>
-                                        <td>{{$r->MaSP}}</td>
-                                        <td>{{$r->TenSP }}</td>
-                                        <td>{{$r->MaLoai }}</td>
-                                        <td>{{$r->DonVi }}</td>
-                                        <td>{{$r->MoTa}}</td>
-                                        <td><img src="{{asset('img'.'/'.$r->HinhAnh)}}" alt=""></td>
-                                        <td style="color:red; font-weight:bold; text-align:">{{ number_format($r->DonGia) }} </td>
+                                        <td>{{$r->TenKhachHang}}</td>
+                                        <td>{{\Carbon\Carbon::parse($r->NgaySinh)->format('Y/m/d') }}</td>
+                                        <td>{{$r->DiaChi}}</td>
+                                        <td>{{$r->Phone}}</td>
+                                        <td>{{$r->Email}}</td>
                                         <td>
-                                            <!-- <a href="{{ route('PhuKien.edit', $r->id) }}" data-toggle="modal" data-target="#modelIds">Sửa</a> -->
-    
-                                            <a href="{{ route('PhuKien.edit', $r->id) }}"><button  type="submit" ><img class="action" src="{{asset('assets/icon-edit.svg')}}" alt=""></button></a>
-                                            <form role="form" action="{{ route('PhuKien.destroy', $r->id) }}" method="post">
+                                          <a href="" data-toggle="modal" data-target="#modelIds"></a>
+                                            <a href="{{ route('KhachHang.edit', $r->id) }}"><button  type="submit" ><img class="action" src="{{asset('assets/icon-edit.svg')}}" alt=""></button></a>
+                                            <form role="form" action="{{ route('KhachHang.destroy', $r->id) }}" method="post">
                                                 @csrf
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -92,42 +86,29 @@
         </div>
         <!-- Modal -->
         
-        <form role="form" action="{{ route('PhuKien.store') }}" method="post" enctype="multipart/form-data">
+        <form role="form" action="{{ route('KhachHang.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">THÊM MỚI SẢN PHẨM</h5>
+                            <h5 class="modal-title">THÊM KHÁCH HÀNG</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                
-                                <label for="ma">Mã sản phẩm</label>
-                                <input  type="text" id="ma" class="form-control" name="txtMaSP" aria-describedby="helpId" placeholder="">
-                                <label for="name">Tên sản phẩm</label>
-                                <input  type="text" id="name" class="form-control" name="txtTenSP" aria-describedby="helpId" placeholder="">
-                                <label for="">Tên loại</label>
-                                <select  class="form-control" name="txtTenLoai" id="">
-                                    <?php
-                                    use App\Models\loaiPK;
-                                    $db = loaiPK::all();
-                                    ?>
-                                    @foreach($db as $r)
-                                    <option value="{{ $r-> MaLoaiSP }}">{{ $r->TenLoai}}</option>
-                                    @endforeach
-                                </select>
-                                <label for="Unit">Đơn vị</label>
-                                <input  type="text" id="Unit" class="form-control" name="txtDonVi" aria-describedby="helpId" placeholder="">
-                                <label for="Describe">Mô tả</label>
-                                <input  type="text" id="Describe" class="form-control" name="txtMoTa" aria-describedby="helpId" placeholder="">
-                                <label for="image">Hình ảnh</label>
-                                <input  multiple="multiple" type="file" id="image" class="form-control" name="fileImg" ngf-select="UploadFiles($files)">
-                                <label for="price">Đơn giá</label>
-                                <input  type="number" id="price" class="form-control" name="txtDonGia" aria-describedby="helpId" placeholder="">
+                                <label for="name">Tên khách hàng</label>
+                                <input  type="text" id="name" class="form-control" name="txtName" aria-describedby="helpId" placeholder="">
+                                <label for="date">Ngày sinh</label>
+                                <input  type="text" id="Unit" class="form-control" name="txtNgaySinh" aria-describedby="helpId" placeholder="">
+                                <label for="txtAd">Địa chỉ</label>
+                                <input  type="text" id="Describe" class="form-control" name="txtDiaChi" aria-describedby="helpId" placeholder="">
+                                <label for="txtsdt">Phone</label>
+                                <input  type="text" id="Describe" class="form-control" name="txtSDT" aria-describedby="helpId" placeholder="">
+                                <label for="email">Email</label>
+                                <input  type="text" id="Describe" class="form-control" name="txtEmail" aria-describedby="helpId" placeholder="">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -137,7 +118,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </form> 
         <!--End Modal-->
         
     </div>

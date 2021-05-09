@@ -4,12 +4,13 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
+ body {
     background-color: #f8f8f8;
 }
 
 #wrapper {
     width: 100%;
+    background-color: beige;
 }
 
 #page-wrapper {
@@ -239,6 +240,7 @@ a.navbar-brand{
 
 .table-responsive table thead tr th{
     text-align: center;
+    width: auto;
 }
 
 table.dataTable thead .sorting,
@@ -381,3 +383,10 @@ img.action {
     height: 18px;
     width: 18px;
 }
+.modal-content{
+    width: 560px;
+    /* border-left-width: 25px; */
+}
+/* .container{
+    background-color:beige;
+} */

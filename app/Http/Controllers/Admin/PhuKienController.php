@@ -28,9 +28,6 @@ class PhuKienController extends Controller
      */
     public function create()
     {
-        //
-     
-     
         // return view("Admin.PhuKien", ['db'=>$db]);
     }
 
@@ -160,16 +157,16 @@ class PhuKienController extends Controller
     }
 
     
-    // public function search(Request $request)
-    // {
-    //     //
-    //     $text = $request->input("txtSearch");
-    //     if ($text == "") {
-    //         $db = Products::paginate(6);
-    //     }
-    //     else {
-    //         $db = Products::where('ProductName','LIKE','%'.$text.'%')->paginate(50);
-    //     }
-    //     return view('admin.product', ['db'=>$db]);
-    // }
+    public function search(Request $request)
+    {
+        //
+        $text = $request->input("txtSearch");
+        if ($text == "") {
+            $db = PhuKien::paginate(150);
+        }
+        else {
+            $db = PhuKien::where('TenSP','LIKE','%'.$text.'%')->paginate(50);
+        }
+        return view('Admin.PhuKien', ['db'=>$db]);
+    }
 }

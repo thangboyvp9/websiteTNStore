@@ -8,7 +8,7 @@
                 <ol class="breadcrumb breadcrumb-arrows">
                     <li><a href="index.html" target="_self">Trang chủ</a></li>
                     <li><a href="/" target="_self">Danh mục</a></li>
-                    <li class="active"><span>Tất cả sản phẩm</span></li>
+                    <li class="active"><span>Chi tiết sản phẩm</span></li>
                 </ol>
             </div>
         </div>
@@ -107,15 +107,9 @@
                         </div>
                         <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">				
                             <div class="select clearfix">
-                                <ul>
-                                    <li>- Thiết kế nhỏ gọn, phù hợp với nhiều kích cỡ tai.</li>
-                                    <li>- Màng loa có kích thước 7.2 mm cho âm bass các thêm dày và sâu.</li>
-                                    <li>- Bắt trọn âm thanh với công nghệ khử tiếng ồn DSP.</li>
-                                    <li>- Yên tâm sử dụng với khả năng chống nước IPX4.</li>
-                                    <li>- Nghe nhạc thả ga, sạc đầy pin nhanh chóng.</li>
-                                    <li>- Kết nối không dây nhanh chóng, tương thích với nhiều thiết bị nhờ công nghệ Bluetooth 5.0.</li>
-                                    <li>- Tự động kết nối, điều khiển tai nghe tiện lợi.</li>
-                                </ul>
+                            <ul>
+                                 <h2 style="color:red;">{{ $PhuKien->MaSP}}</h2>
+                                <li>{{ $PhuKien->MoTa}}</li><br>
                                 <!-- <div class="selector-wrapper">
                                     <label for="product-select-option-0">Kích thước</label>
                                     <span class="custom-dropdown custom-dropdown--white">
@@ -204,11 +198,7 @@
                                                             <h2>Bình luận</h2>
                                                         </div>
                                                         <div class="product-comment-fb">
-                                                            <div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop">
-                                                                <span style="vertical-align: bottom; width: 100%; height: 178px;">
-                                                                    <iframe name="f256602566438bc" width="1000px" height="100px" data-testid="fb:comments Facebook Social Plugin" title="fb:comments Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.0/plugins/comments.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df1d967e45a56f34%26domain%3Ddefault-fresh-food.myharavan.com%26origin%3Dhttps%253A%252F%252Fdefault-fresh-food.myharavan.com%252Ff588088507b4cc%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=828&amp;height=100&amp;href=https%3A%2F%2Fdefault-fresh-food.myharavan.com%2Fproducts%2Fbap-cai-tim-da-lat-pf&amp;locale=vi_VN&amp;numposts=5&amp;sdk=joey&amp;version=v2.0&amp;width=" style="border: none; visibility: visible; width: 100%; height: 178px;" class=""></iframe>
-                                                                </span>
-                                                            </div>
+                                                            <div class="fb-comments" data-href="https://www.facebook.com/nguyenvanthangvip" data-width="" data-numposts="5"></div>
                                                         </div>
                                                     </div>
                                                 </div>
