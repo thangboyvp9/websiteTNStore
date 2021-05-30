@@ -6,9 +6,9 @@
         <div class="row main-header">							
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd5  ">
                 <ol class="breadcrumb breadcrumb-arrows">
-                    <li><a href="{{asset('/')}}" target="_self">Trang chủ</a></li>
-                    <li><a href="/" target="_self">Danh mục</a></li>
-                    <li class="active"><span>Tất cả sản phẩm</span></li>
+                    <li><a href="" target="_self">Trang chủ</a></li>
+                    <!-- <li><a href="/" target="_self">Sản Phẩm</a></li> -->
+                    <li class="active"><span>Sản Phẩm</span></li>
                 </ol>
             </div>
         </div>
@@ -101,16 +101,15 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 sort">
                                     <div class="browse-tags">
+                                    <form action="" id="form_order" method="get">
                                         <span>Sắp xếp theo:</span>
                                         <span class="custom-dropdown custom-dropdown--white">
-                                            <select class="sort-by custom-dropdown__select custom-dropdown__select--white">
-                                                <option value="price-ascending">Giá: Tăng dần</option>
-                                                <option value="price-descending">Giá: Giảm dần</option>
-                                                <option value="title-ascending">Tên: A-Z</option>
-                                                <option value="title-descending">Tên: Z-A</option>
-                                                <option value="created-ascending">Cũ nhất</option>
-                                                <option value="created-descending">Mới nhất</option>
-                                                <option value="best-selling">Bán chạy nhất</option>
+                                            <select class="orderby" class="custom-dropdown__select custom-dropdown__select--white" name="orderby">
+                                                <option {{ Request::get('orderby') == "md" || !Request::get('orderby') ? "selected='selected'" : "" }} value="md" selected>Mặc định</option>
+                                                <option {{ Request::get('orderby') == "desc" ? "selected='selected'" : "" }} value="desc">Mới nhất</option>
+                                                <option {{ Request::get('orderby') == "asc" ? "selected='selected'" : "" }} value="asc">Sản phẩm cũ</option>
+                                                <option {{ Request::get('orderby') == "price_max" ? "selected='selected'" : "" }} value="price_max">Giá tăng dần</option>
+                                                <option {{ Request::get('orderby') == "price_min" ? "selected='selected'" : "" }} value="price_min">Giá giảm dần</option>
                                             </select>
                                         </span>
                                     </div>
@@ -126,7 +125,7 @@
                                     <a href="{{ route('CTPhuKien').'/'.$PK->id }}"><img src="{{asset('img'.'/'.$PK->HinhAnh)}}" alt=""></a>
                                     <div class="actionss">
                                         <div class="btn-cart-products">
-                                            <a href="">
+                                            <a href="{{ route('addcart', ['id' => $PK->id]) }}">
                                                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                             </a>
                                         </div>

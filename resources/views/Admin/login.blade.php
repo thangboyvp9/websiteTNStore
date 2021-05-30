@@ -53,7 +53,7 @@
 									</div>
 								</div>
 								<p class="p-bottom-w3ls">Bạn quên pass?<a class href="#"> Bấm vô</a></p>
-								<p class="p-bottom-w3ls1">Bạn chưa có ?<a class href="#"> Tạo ngay</a></p>
+								<p class="p-bottom-w3ls1">Bạn chưa có ?<a class href="{{ route('/Register/index') }}"> Tạo ngay</a></p>
 								<div class="clear"></div>
 								<div class="submit-w3l">
 									<input type="submit" value="Đăng nhập">

@@ -16,7 +16,7 @@ class LoaiPKController extends Controller
      */
     public function index()
     {
-        $db = loaiPK::paginate(9);
+        $db = loaiPK::paginate(5);
         return view("Admin.LoaiPK",['db'=>$db]);
     }
 

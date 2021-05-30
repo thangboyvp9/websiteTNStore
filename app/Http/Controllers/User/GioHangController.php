@@ -22,6 +22,7 @@ class GioHangController extends Controller
         //
         $loaiPK = loaiPK::all();
         $cart = Cart::content();
+       
         $keywords = $request->txtSearch;
         if ($keywords == "") {
             $search_PhuKien = PhuKien::limit(0)->get();
@@ -48,7 +49,7 @@ class GioHangController extends Controller
         $cart = ['id' => $id, 'name' => $PhuKien->TenSP,"qty"=>$qty , "weight"=>10, 'price' => $DonGia, 'options' => ['img' => $PhuKien->HinhAnh,"Loai"=>$PhuKien->LoaiPK->TenLoai]];
         Cart::add($cart);
         // dd(Cart::content());
-        return redirect()->route('index')->with('message','Đã mua '.$PhuKien->TenSP.' thành công');
+        return redirect()->back()->with('message','Đã mua '.$PhuKien->TenSP.' thành công');
     }
     /**
      * Store a newly created resource in storage.

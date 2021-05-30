@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Danh sách Nhà Cung Cấp
+                    Danh Sách Nhà Cung Cấp
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -14,7 +14,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Danh sách sản phẩm
+                        Danh sách các nhà cung cấp
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -37,7 +37,7 @@
                         
                         <div class="table-responsive">
                             @php 
-                            $tt = 0;
+                            $tt = 1;
                             @endphp
                             <table class="table table-striped table-bordered table-hover" style="text-align: center;">
                                 <thead>

@@ -28,7 +28,7 @@ class LoginController extends Controller
       //   $result = DB::table('users')->where('username', $us)->where('password', $pw)->first();
          $result = Users::where('username', $us)->where('password', $pw)->first();
         //  dd($result);
-        if($result == true){
+        if($result){
             Session::put('username', $result->username);
             Session::put('password', $result->password);
 
@@ -36,7 +36,7 @@ class LoginController extends Controller
         }
         else{
             Session::put('message','Tên người dùng hoặc mật khẩu không đúng');
-            return redirect()->route('/Admin/index');
+            return redirect()->route('/login/index');
         }
     } 
     public function logout()

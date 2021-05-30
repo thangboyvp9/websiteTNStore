@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Danh sách sản phẩm
+                    Danh Sách Loại
                 </h1>
             </div>
             <!-- /.col-lg-12 -->
@@ -15,7 +15,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Danh sách sản phẩm
+                        Danh sách các loại
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">

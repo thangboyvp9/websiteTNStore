@@ -140,7 +140,7 @@ color: #fff !important;
 h1 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 45px;
+    font-size: 50px;
     font-weight: bold;
     margin: 40px 0;
     color: #ffffff;
@@ -168,7 +168,7 @@ form {
 }
 .form-sub-w3 input[type="text"],input[type="password"] {
     outline: none;
-    font-size: 15px;
+    font-size: 17px;
     color: #ffffff;
     padding: 15px 40px 15px 10px;
     letter-spacing: 2px;
@@ -178,7 +178,7 @@ form {
     -webkit-appearance: none;
     margin-bottom: 10px;
     background: transparent;
-	font-family: 'Sirin Stencil', cursive;
+	/* font-family: 'Sirin Stencil', cursive; */
 }
 .form-sub-w3 input[type="password"] {
     outline: none;
@@ -497,3 +497,9 @@ i.fa.fa-pinterest-p {
 	}
 }
 /*--- //Responsive Code ---*/
+.fa-user:before{
+	color: wheat;
+}
+.fa-unlock-alt:before{
+	color: wheat;
+}

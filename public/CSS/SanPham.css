@@ -62,7 +62,7 @@
 
 .sb-title::before {
 	position: absolute;
-	top: 30px;
+	top: 40px;
 	content: '';
 	width: 45px;
 	height: 2px;

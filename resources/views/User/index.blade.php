@@ -1,16 +1,7 @@
 @extends('layout')
 @section('content')
 
-<?php
-    $message = Session::get('message');
-    if($message){
-        echo '
-        <script>
-            alert("Đã thêm sản phẩm thành công");
-        </script>';
-    }
 
-?>
 <header>
 <div class="header-banner">           
             <div id="carouselId" class="carousel slide" data-ride="carousel">
@@ -57,7 +48,7 @@
                     @foreach($PhuKien as $PhuKien)
                         <div class="col-md-3 col-sm-6 col-xs-6 San-Pham">
                             <div class="product-img">
-                                <a href="">
+                                <a href="{{ route('CTPhuKien').'/'.$PhuKien->id }}">
                                     <img src="{{asset('img'.'/'.$PhuKien->HinhAnh)}}" alt="">
                                 </a>
                                 <div class="actionss">

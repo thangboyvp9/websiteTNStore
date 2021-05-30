@@ -54,7 +54,8 @@
                         </table>
                      
                         <div class="buttons">
-                            <button type="submit" id="checkout" class="button-default" name="checkout" value="" title="Thanh toán">Thanh toán &nbsp;&nbsp; 
+                            <button type="submit" id="checkout" class="button-default" name="checkout" value="" title="Thanh toán">
+                                <a href="{{ route('checkout') }}"> Thanh toán &nbsp;&nbsp; </a>
                                 </i>
                             </button>
                             <button type="submit" id="update-cart"  class="button-default" name="update" value="">

@@ -22,7 +22,7 @@ a:hover{
 }
 
 header{
-    height: 100%;
+    height: 40%;
 }
 
 .header-top {
@@ -796,4 +796,6 @@ footer .inner li a:hover {
 }
 
 
-
+button.btn.btn-search {
+    position:absolute;
+}

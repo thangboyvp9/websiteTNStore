@@ -15,8 +15,8 @@ class Users extends Model
         "remember_token"
     ];
     protected $primaryKey = "id";
-    // public function role()
-    // {
-    //     return $this->belongsTo("App\Models\Roles", "role_id");
-    // }
+    public function role()
+    {
+        return $this->belongsTo("App\Models\Roles", "role_id");
+    }
 }

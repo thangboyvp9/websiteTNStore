@@ -17,10 +17,10 @@ class KhachHang extends Model
     ];
     protected $primaryKey = "id";
 
-    // public function orders()
-    // {
-    //     return $this->hasMany("App\Models\Orders", "CustomerId");
-    // }
+    public function orders()
+    {
+        return $this->hasMany("App\Models\Orders", "KhachHangId");
+    }
 
    
 }

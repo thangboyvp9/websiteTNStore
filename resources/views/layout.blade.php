@@ -12,7 +12,12 @@
     <link rel="stylesheet" href="{{asset('CSS/SanPham.css')}}">
     <link rel="stylesheet" href="{{asset('CSS/CTSanPham.css')}}">
     <link rel="stylesheet" href="{{asset('CSS/GioHang.css')}}">
-    <script src="./script/script.js"></script>
+    <link rel="stylesheet" href="{{asset('CSS/GioiThieu.css')}}">
+    <link rel="stylesheet" href="{{asset('CSS/LienHe.css')}}">
+    <link rel="stylesheet" href="{{asset('CSS/TinTuc.css')}}"> 
+    <script src="{{asset('./script/script.js')}}"></script>
+    <script src="{{asset('./script/search.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('CSS/search.css')}}"> 
     <link rel="stylesheet" href="{{asset('./font/fontawesome-free-5.13.0/css/all.min.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script async type="text/javascript" src="https://panel.chatcompose.com/static/EN/global/export/js\main.dec259c7.js" user="SonNguyen"></script>  
@@ -24,7 +29,7 @@
         <div class=" container header-top">
             <div class="row">
                 <div class="col-sm-4 header-logo">
-                    <img src="{{asset('img/logo1.png')}}" alt="">
+                    <a href="{{ route('index') }}"><img src="{{asset('img/logo1.png')}}" alt=""></a>
                 </div>
                 <div class="col-sm-8 header-info">
                     <div class="header-cart">
@@ -77,9 +82,9 @@
                     </div>
                     <div class="header-subnav">
                         <ul>
-                            <li><i class="fas fa-phone-alt"></i> 1900.636.099</li>
-                            <li><a href="SignUp.html">ĐĂNG KÝ</a></li>
-                            <li><a href="{{ route('/login/index') }}">ĐĂNG NHẬP</a></li>
+                            <li style="color:red;"><i class="fas fa-phone-alt"></i> 1900.636.099</li>
+                            <li><a href="{{ route('register') }}">ĐĂNG KÝ</a></li>
+                            <li><a href="{{ route('login') }}">ĐĂNG NHẬP</a></li>
                         </ul>
                         <p>Miễn phí vận chuyển <span>ĐƠN HÀNG TRÊN 900K</span> </p>    
                     </div>
@@ -129,6 +134,7 @@
                         <li><a href="GioiThieu.html">Giới thiệu</a></li>
                         <li><a href="TinTuc.html">Tin tức</a></li>
                         <li><a href="LienHe.html">Liên hệ</a></li>		
+                        <li><a href="{{ Auth::logout() }}">Đăng xuất</a></li>		
                     </ul>
                 </section>
                 <section class="col-sm-6 col-md-4 col-xs-12 clear-sm column-item">
@@ -206,24 +212,24 @@
                                     <li class="feilds">
                                         <div class="feild">
                                             <div class="input-box">
-                                                <input type="text" name="txtTen" id="txtTen" placeholder="Tên Của Bạn...">
+                                                <input type="text" name="" id="txtTen" placeholder="Tên Của Bạn...">
                                             </div>
                                         </div>
                                         <div class="feild">
                                             <div class="input-box">
-                                                <input type="email" name="contact[email]" id="email" placeholder="Email của bạn...">
+                                                <input type="email" name="" id="email" placeholder="Email của bạn...">
                                             </div>
                                         </div>
                                     </li>
                                     <li class="wide feild">
                                         <div class="input-box">
-                                            <textarea name="contact[body]" class="BinhLuan" id="txtBinhLuan" cols="10" rows="7" placeholder="Viết bình luận..."></textarea>
+                                            <textarea name="" class="BinhLuan" id="txtBinhLuan" cols="10" rows="7" placeholder="Viết bình luận..."></textarea>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="buttons-set">
-                                <button type="submit" title="Send" class="button" onclick="KiemTra()">
+                                <button type="submit" title="Send" class="button">
                                     <span>Gửi</span>
                                 </button>
                                 <button type="reset" class="button" value="Reset">
@@ -241,5 +247,16 @@
             <span>Nguyenvanthanghn44@gmail.com</span>
         </div>
     </footer>
+
+    <script>
+        $(function () { 
+            $('.orderby').change(function () { 
+                $('#form_order').submit();
+            });
+            $('.display').change(function () { 
+                $('#form_display').submit();
+            });
+        })
+    </script>
 </body>
 </html>

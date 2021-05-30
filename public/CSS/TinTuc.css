@@ -1,130 +1,230 @@
-/* Menu left */
-.leftsidebar-col h3.sb-title, .Content-title, h1 {
-    font-family: 'Roboto' 400;
-    font-size: 16px;
-    text-transform: uppercase;
+body{
+    background-color: white;
 }
 
-.sb-title::before {
-    position: absolute;
-    top: 30px;
-    content: '';
-    width: 45px;
-    height: 2px;
-    background-color: #28b241;
+.tin-tuc {
+    width: 1290px;
+    margin: auto;
 }
 
-.Content-title::before{
-    position: absolute;
-    top: 54.5%;
-    content: '';
-    width: 45px;
-    height: 2px;
-    background-color: #28b241;
+.left{
+    width: 26%;
+    padding-top: 30px;
+    float: left;
 }
 
-
-.leftsidebar-col ul li{
-    width: 100%;
-    padding: 10px;
-    margin: 5px;
-    text-transform: uppercase;
-    font-size: 13px;
-    border-bottom: 1px solid #ebebeb;
-}
-
-.leftsidebar-col ul li a:hover{
+.tin-tuc a:hover{
     color: #28b241;
 }
 
-.list-group_l.banner-left {
-    margin-bottom: 35px;
-    margin-top: 20px;
+.Danh-muc{
+    padding-left: 0;
+    margin-bottom: 20px;
 }
 
 
-/****blog ***/
-/** sidebar blog **/
-#blog-container {
-    padding-left: 50px;
+.title{
+    position: relative;
+    /* margin: 0 40px 0px 0; */
+    line-height: 36px;
+    margin-top: 0px;
+    padding: 10px 0;
+    font-size: 34px;
+    color: #444444;
+    font-family: 'Lobster Two';
+    font-weight: 700;
 }
+
+#menu-blog>li {
+    border-bottom: 1px dashed #c9c9c9;
+}
+
+.nav>li {
+    position: relative;
+    display: block;
+    padding: 10px;
+}
+
+.news-menu #menu-blog li.active a {
+    color: #d71e1e;
+}
+
+
 .seller-item {
     display: inline-block;
     width: 100%;
     clear: both;
-    padding: 15px 0;
-    font-size: 14px;
+    border-bottom: 1px dashed #c9c9c9;
+    padding: 30px 0 20px;
 }
-.seller-item .sellers-image {
+
+.sellers-img img{
+    width: 150px;
+    height: 105px;
+    border-radius: 5px;
+}
+
+.seller-item .sellers-img {
     float: left;
-    margin: 0 15px 0 0;
+    margin: 0 55px 0 0;
     width: 100px;
 }
 
-.seller-item .sellers-image img {
-    width: 100px;
+.product-content h5 a{
+    color: #444444;
+    font-family: 'Lobster Two';
+    font-weight: 700;
+    font-size: 16px;
+}
+.product-content h5 a:hover{
+    color: #FE9705;
 }
 
-#tintuc .post-content {overflow: hidden;text-align: left;}
-.sidebar .article a {display: block;}
-.post-Content .date {color:#333333;font-size: 12px;}
-.post-Content .date i {margin-right: 5px;}
-.post-Content {overflow: hidden;}
-.post-Content a:hover{ color: #FE9705;}
+.product-content span i{
+    margin-top: 5px;
+}
 
-.news-content {margin: 15px 0px;padding-bottom: 25px; float: left;width: 100%; border-bottom: 1px solid #ebebeb;}
-.news-content h2.title-article a {font-size: 18px;line-height: 20px; font-weight: 700;}
-.news-content h2.title-article a:hover {color: #28b241;}
-.body-content ul {float: left; width: 100%;}
-.body-content .info-more li {position: relative;padding-left: 20px;display: inline-block;}
-.body-content .info-more li:first-child {padding-left: 0px;}
-.body-content .info-more a,.body-content .info-more time{
-    color:#333333;
-    text-decoration: none;
-    font-style: italic;
-    font-size:14px;
-    padding-left:5px;
+.product-content {
+    background-color: #fff;
+    overflow: hidden;
+    text-align: left;
 }
-.icon-hot{
+
+
+.right{
+    float: right;
+    width: 70%;
+    margin-top: 10px;
+    padding: 5px 15px;
+}
+
+.header h1{
+    font-size: 34px;
+    color: #444444;
+    font-family: 'Lobster Two';
+    font-weight: 700;
+}
+
+
+.news-content.row {
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+.news-content .img-article{
+    width: 40%;
+    float: left;
+}
+
+.news-content .content-artical{
+    width: 50%;
+    float: left;
+} 
+
+
+.news-content img{
+    width: 330px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.news-content h2.title-article a {
+    font-size: 20px;
+    color: #444444;
+    font-family: 'Lobster Two';
+    font-weight: 700;
+}
+
+.news-content h2.title-article a:hover{
+    color: #FE9705;
+}
+
+
+.date-post p, .date-post-article p {
     display: inline-block;
-    margin: 2px 7px 0 0;
-    min-height: 15px;
-    width: 16px;
+    margin-left: 3px;
+    color: #909090;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 0px;
 }
-.icon-hrv{
-    display: inline-block;
-    margin: 2px 7px 0 0;
-    min-height: 15px;
-    width: 16px;
-}
-.news-content .body-content p {
-    font-family: 'Roboto' 400;
-    margin-bottom: 16px;
-    text-align: justify;
+
+.body-content p{
     font-size: 14px;
 }
 
-.btn-rb {
-    display: inline-block;
-    padding: 10px 20px;
-    width: auto;
-    margin: 0;
-    line-height: 1.42;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 0;
-    text-transform: uppercase;
-    background-color:#ffffff;
-    color: #333333;
-    font-size: 11px;
-    border:1px solid #333333;
+i.fa-clock{
+    color: #FE9705;
+    font-size: 15px;
+    
 }
-.btn-rb:hover {
-    background-color: #28b241;
-    color:#ffffff;
+
+.body-content {
+    margin-bottom: 20px;
+}
+
+
+
+.postDetails {
+    border-top: 1px solid violet;
+    padding-top: 6px;
+    margin-top: 10px;
+}
+
+.count-comment-blog li {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+i.fa-newspaper{
+    
+    color: #FE9705;
+    font-size: 13px;
+}
+
+.count-comment-blog li a {
+    color: #bf1515;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#pagination{
+    /* width: 100%; */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+#pagination a.page-node:hover, 
+#pagination span.page-node.current {
+    border-bottom: 2px solid #28b241;
+    color: #28b241;
+    font-weight: bold;
+}
+#pagination a.page-node,
+#pagination span.page-node {
+    font-size: 15px;
+    color: #333333;
+    padding: 0px 10px;
+    height: 57px;
+    display: inline-block;
+    line-height: 56px;
+}
+
+#pagination a.TrangSau span{
+    margin: 20px;
+    margin-right: 85px;
+    float: right;
+    font-size: 14px;
+}
+
+#pagination a.TrangTruoc span{
+    float: left;
+    margin: 15px;
+    font-size: 14px;
+}
+
+.nav {
+display: block;
 }

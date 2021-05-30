@@ -264,3 +264,10 @@ p {
 	text-align: center;
 	margin-bottom: 15px;
 }
+.product-comment #mota {
+	padding: 41px;
+}
+
+.col-lg-9.col-md-9.col-sm-12.col-xs-12{
+	padding-bottom:50px;
+}

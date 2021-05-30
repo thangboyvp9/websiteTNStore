@@ -246,7 +246,12 @@
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="{{ route('logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <form action="{{ route('login') }}" method="post">
+                                @csrf
+                                <a href="{{ Auth::logout() }}">
+                                    <i class="fa fa-sign-out fa-fw"></i> Logout
+                                </a>
+                             </form>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->
@@ -269,7 +274,7 @@
                                 <!-- /input-group -->
                             </li>
                             <li>
-                                <a href=""><i class="fa fa-dashboard fa-fw"></i> Trang chủ</a>
+                                <a href="{{ route('index') }}"><i class="fa fa-dashboard fa-fw"></i> Trang chủ</a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-user fa-fw"></i> Hệ thống<span class="fa arrow"></span></a>
@@ -326,7 +331,7 @@
                                 <a href="#"><i class="fa fa-money fa-fw"></i> Đơn đặt hàng<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level collapse">
                                     <li>
-                                        <a href="DonDatHang.html">Danh mục</a>
+                                        <a href="{{ route('order.index') }}">Đơn Hàng</a>
                                     </li>
                                     <li>
                                         <a href="ChiTietDonHang">Chi tiết đơn hàng</a>
@@ -391,7 +396,7 @@
         </div>
         <!-- /#wrapper -->
         <!-- jQuery -->
-        <script src="/assets/admin/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/assets/admin/bower_components/jquery/dist/jquery.min.js"></script>    
         <script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
         <!-- Bootstrap Core JavaScript -->
         <script src="/assets/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
